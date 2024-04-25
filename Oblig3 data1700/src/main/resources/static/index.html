@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tickets</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .error {
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h1>Movie Ticket Registration Form</h1>
+            <form class="form" id="bestilling" onsubmit="formSubmit(); return false">
+                <div class="form-group">
+                    <label for="film">Choose a film:</label>
+                    <select id="film" class="form-control" name="film" required>
+                        <option hidden disabled selected value>Select a film</option>
+                        <option>Inception</option>
+                        <option>Interstellar</option>
+                        <option>Star Wars</option>
+                        <option>The Untouchables</option>
+                        <option>Liar Liar</option>
+                        <option>The Mask</option>
+                        <option>Asterisk and Obelisk</option>
+                        <option>Hansel and Gretel</option>
+                        <option>Puss In Boots</option>
+                        <option>The Magical Crown</option>
+                    </select><br>
+                </div>
+                <div class="form-group">
+                    <label for="number">Number of tickets to buy:</label>
+                    <input type="number" class="form-control" id="number" name="Amount" min="1" max="100" required>
+                </div>
+                <div class="form-group">
+                    <label for="firstName">First name:</label>
+                    <input type="text" class="form-control" id="firstName" name="FirstName" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last name:</label>
+                    <input type="text" class="form-control" id="lastName" name="LastName" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" class="form-control" id="phone" name="Phone">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" name="Email">
+                </div>
+                <div>
+                    <button class="btn btn-info" id="ticketsButton">Buy</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <h2>All tickets:</h2>
+            <div id="tickets"></div>
+            <button class="btn btn-danger" id="deleteAllTickets" onclick="slettAlle()">Delete all tickets</button>
+        </div>
+    </div>
+</div>
+<script src="javaScript.js"></script>
+</body>
+</html>
